@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f30bac4583b94af2816051fcb9ece326" Name="Diagram1">
+        <EntityTypeShape EntityType="luisOLBModel.ACRA_CreditScope" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="luisOLBModel.ACRA_CreditStatus" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="luisOLBModel.ACRA_Loan_Types" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="luisOLBModel.ACRA_osDays" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="luisOLBModel.ACRA_R_CurrentOverdue" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="luisOLBModel.ACRA_R_Loan" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="luisOLBModel.ACRA_R_TotalLiabilities" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="luisOLBModel.ACRA_ReqStatus" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="luisOLBModel.ACRA_RequestsI" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="luisOLBModel.ACRAUser" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="luisOLBModel.FK_ACRA_R_TotalLiabilities_ACRA_RequestsI" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="luisOLBModel.ACRA_TotalOfLnAndGr" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="luisOLBModel.ACRA_Interrelated" Width="1.5" PointX="10.375" PointY="9.75" />
+        <EntityTypeShape EntityType="luisOLBModel.ACRA_RequestesInfo" Width="1.5" PointX="3.375" PointY="10.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

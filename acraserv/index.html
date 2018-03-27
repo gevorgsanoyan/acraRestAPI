@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Testing ACRA Service</title>
+	<meta charset="utf-8" />
+
+    <script>
+        var uri = 'api/acraResponse';
+
+        function find() {
+            var firstName = $('#firstName').val();
+            var lastName = $('#lastName').val();
+            var socCard = $('#socN').val();
+            var clientID = $('#clientID').val();
+            var rtype = $('#rtype').val();
+            var istest = $('#istest').val();
+            $.getJSON(uri + '/' + firstName + '/' + lastName + '/' + socCard + '/' + clientID + '/' + rtype + '/' + istest)
+                .done(function (data) {
+                    $('#acraresp').text(data);
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    $('#acraresp').text('Error: ' + err);
+                });
+        }
+    </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    Անուն
+                </td>
+                <td>
+                    Ազգանուն
+                </td>
+                <td>
+                    Սոցքարտ
+                </td>
+                <td>
+                    ClientID
+                </td>
+                <td>
+                    Request Type(1 - New loan, 2 - Mon.)
+                </td>
+                <td>
+                    Is Test? (1 - Test)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="firstName" />
+                </td>
+                <td>
+                    <input type="text" id="lastName" />
+                </td>
+                <td>
+                    <input type="text" id="socN" />
+                </td>
+                <td>
+                    <input type="text" id="clientID" />
+                </td>
+                <td>
+                    <input type="text" id="rtype" value="2" />
+                </td>
+                <td>
+                    <input type="text" id="istest" value="2" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="button" value="Search" onclick="find();" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <p id="acraresp" />
+    </div>
+
+</body>
+</html>
